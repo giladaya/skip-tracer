@@ -51,7 +51,7 @@ class App extends Component {
           />
         </header>
         <div className="App-body">
-          <Plate image={this.state.images[this.state.curStep]}/>
+          <Plate images={this.state.images} showIndex={this.state.curStep}/>
         </div>
       </div>
     );

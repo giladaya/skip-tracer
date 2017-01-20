@@ -3,10 +3,14 @@ import React, { PropTypes } from 'react'
 class Plate extends React.Component {
 
   static propTypes = {
-    image: PropTypes.string.isRequired
+    images: PropTypes.arrayOf(
+      PropTypes.string
+    ).isRequired,
+    showIndex: PropTypes.number
   }
 
   static defaultProps = { 
+    showIndex: 0,
   }
 
   componentDidMount(props) {
@@ -18,13 +22,17 @@ class Plate extends React.Component {
   }
 
   addTouchEvents() {
+    document.addEventListener('touchstart', this.onTouchMove, false);
     document.addEventListener('touchmove', this.onTouchMove, false);
     document.addEventListener('mousemove', this.onTouchMove, false);
+    document.addEventListener('click', this.onTouchMove, false);
   }
 
   removeTouchEvents() {
+    document.addEventListener('touchstart', this.onTouchMove, false);
     document.addEventListener('touchmove', this.onTouchMove, false);
     document.addEventListener('mousemove', this.onTouchMove, false);
+    document.addEventListener('click', this.onTouchMove, false);
   }
 
   onTouchMove = (e) => {
@@ -34,7 +42,9 @@ class Plate extends React.Component {
   render () {
     return (
       <div className="plate">
-        <img src={this.props.image} alt={this.props.image}/>
+        {this.props.images.map((image, idx) => 
+          <img src={image} key={`step_${idx}`} alt={image} style={idx === this.props.showIndex ? {} : {display: 'none'}}/>
+        )}
       </div>
     )
   }
