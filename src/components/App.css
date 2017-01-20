@@ -1,0 +1,48 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 60px;
+  padding: 20px;
+  color: white;
+  position: relative;
+}
+
+.App-header .btn_full {
+  position: absolute;
+  left: 20px;
+}
+
+.App-body {
+  flex: 1;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.controls .title {
+  margin: 0 20px;
+  font-weight: bold;
+}
+.controls .btn {
+}
+
+
+.plate {
+  height: 90%;
+  padding: 10% 0 0 0;
+}
+
+.plate img {
+  height: 90%;
+}
