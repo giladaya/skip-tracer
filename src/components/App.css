@@ -21,6 +21,11 @@
   position: absolute;
   left: 20px;
 }
+.App-header .btn_pick {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
 
 .App-body {
   flex: 1;
@@ -28,6 +33,18 @@
 
 .App-intro {
   font-size: large;
+}
+
+.modal-body .grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.modal-body .grid figure {
+  width: 50%;
+  margin: 0;
+}
+.modal-body .grid figure img {
+  width: 100%;
 }
 
 .controls .title {
