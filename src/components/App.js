@@ -54,7 +54,7 @@ class App extends Component {
   }
 
   render() {
-    const thumbnails = this.props.data.map((item) => item.steps[item.steps.length-1])
+    const thumbnails = this.props.data.map((item) => item.thumbnail)
     return (
       <div className="App full-page">
         <header className="App-header">
