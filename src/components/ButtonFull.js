@@ -15,7 +15,7 @@ class ButtonFull extends React.Component {
   toggle = (ev) => {
     screenfull.toggle()
     this.setState({
-      isFull: !this.state.isFull
+      isFull: screenfull.isFullscreen
     })
   }
 
