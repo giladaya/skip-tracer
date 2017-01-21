@@ -3,8 +3,19 @@ import React, { PropTypes } from 'react'
 const Grid = (props) => (
   <div className="grid">
     {props.images.map((image, idx) => 
-      <figure key={`image_${idx}`}>
-        <img src={image} onClick={props.onClick} alt={`drawing ${idx}`} data-index={idx}/>
+      <figure 
+        key={`image_${idx}`}
+        style={{
+          backgroundImage: 'url(' + image + ')',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center center',
+          backgroundSize: 'contain',
+          padding: '25%',
+          width: '50%'
+        }}
+        onClick={props.onClick} 
+        data-index={idx}
+        >
       </figure>
     )}
   </div>
