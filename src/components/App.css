@@ -11,12 +11,17 @@
 
 .App-header {
   background-color: #222;
-  height: 60px;
+  height: 80px;
   padding: 20px;
   color: white;
   position: relative;
 }
 
+.App-header .btn {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+}
 .App-header .btn_full {
   position: absolute;
   left: 20px;
