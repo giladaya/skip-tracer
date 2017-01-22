@@ -1,0 +1,14 @@
+{
+  "name": "Skip Tracer",
+  "short_name": "Skip Tracer",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "icons": [
+    {
+      "src": "images/st_logo.png",
+      "sizes": "494x494"
+    }
+  ]
+}

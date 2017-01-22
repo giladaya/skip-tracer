@@ -1,3 +1,22 @@
+# Skip Tracer
+A draw-by-tracing web app for kids.  
+
+# Usage 
+This app is intended to be used on tablets because of their large screens.  
+
+- Turn the screen brightness to the maximum
+- Browse to the app URL  
+- Go full screen
+- Choose a drawing  
+- Put a regular paper sheet on the tablet  
+- Hold it in place using a large paper clamp
+- Draw  
+- Use arrows to go to the next step
+- Rinse  
+- Repeate   
+
+
+# Development and Deployment
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
