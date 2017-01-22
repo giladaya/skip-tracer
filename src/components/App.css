@@ -45,8 +45,12 @@
   flex-wrap: wrap;
 }
 .modal-body .grid figure {
-  width: 50%;
   margin: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  width: 50%;
+  padding: 25%;
 }
 .modal-body .grid figure img {
   width: 100%;
@@ -67,4 +71,12 @@
 
 .plate img {
   height: 90%;
+}
+
+.plate .image {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }

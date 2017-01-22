@@ -14,8 +14,48 @@ class Plate extends React.Component {
     showIndex: 0,
   }
 
-  componentDidMount(props) {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loadedImages: props.images.map(() => false)
+    }
+    this.loadImages(props.images)
+  }
+
+  componentDidMount() {
     this.addTouchEvents(this.container)
+  }
+
+  loadImages = (images) => {
+    images.forEach((imageUrl, idx) => {
+      const imgEl = document.createElement('img')
+      imgEl.onload = this.onImgLoad
+      imgEl.dataset.index = idx
+      imgEl.src = imageUrl
+    })
+  }
+
+  onImgLoad = (ev) => {
+    //console.log('loaded', ev.target.dataset.index)
+    const newState = this.state.loadedImages.map((item, idx) => {
+      //console.log(idx)
+      // eslint-disable-next-line
+      return idx == ev.target.dataset.index ? true : item
+    })
+    //console.log(newState)
+    this.setState({
+      loadedImages: newState
+    })
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.images[0] !== this.props.images[0]) {
+      this.setState({
+        loadedImages: nextProps.images.map(() => false)
+      })
+      this.loadImages(nextProps.images)
+    }
   }
 
   componentWillUnmount() {
@@ -40,12 +80,29 @@ class Plate extends React.Component {
     e.preventDefault();
   };
 
+  _renderImageOrLoading = (idx) => (    
+    this.state.loadedImages[idx] ? 
+      <img src={this.props.images[idx]} 
+            alt={`step ${idx}`} 
+          /> : 
+      <span>Loading...</span>
+  )
+  renderImageOrLoading = (idx) => (    
+    this.state.loadedImages[idx] ? 
+      <div 
+        className="image"
+        style={{
+          backgroundImage: 'url('+this.props.images[idx]+')'
+        }}
+      ></div> : 
+      <span>Loading...</span>
+  )
+
   render () {
+    // console.log('render')
     return (
       <div className="plate" ref={(c)=>this.container=c}>
-        {this.props.images.map((image, idx) => 
-          <img src={image} key={`step_${idx}`} alt={image} style={idx === this.props.showIndex ? {} : {display: 'none'}}/>
-        )}
+        {this.renderImageOrLoading(this.props.showIndex)}
       </div>
     )
   }

@@ -7,11 +7,6 @@ const Grid = (props) => (
         key={`image_${idx}`}
         style={{
           backgroundImage: 'url(' + image + ')',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center center',
-          backgroundSize: 'contain',
-          padding: '25%',
-          width: '50%'
         }}
         onClick={props.onClick} 
         data-index={idx}
