@@ -1,5 +1,6 @@
 # Skip Tracer
-A step-by-step drawing web app for kids.  
+A step-by-step drawing web app for kids.
+[Play with it live](https://giladaya.github.io/skip-tracer/)  
 
 # Usage 
 This app is intended to be used on tablets because of their large screens.  
