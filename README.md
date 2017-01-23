@@ -1,5 +1,5 @@
 # Skip Tracer
-A draw-by-tracing web app for kids.  
+A step-by-step drawing web app for kids.  
 
 # Usage 
 This app is intended to be used on tablets because of their large screens.  
@@ -7,7 +7,7 @@ This app is intended to be used on tablets because of their large screens.
 - Turn the screen brightness to the maximum
 - Browse to the app URL  
 - Go full screen
-- Choose a drawing  
+- Pick a drawing  
 - Put a regular paper sheet on the tablet  
 - Hold it in place using a large paper clamp
 - Draw  
