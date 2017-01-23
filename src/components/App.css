@@ -49,8 +49,8 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  width: 50%;
-  padding: 25%;
+  width: 33%;
+  padding: 16.5%;
 }
 .modal-body .grid figure img {
   width: 100%;
@@ -79,4 +79,12 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
+}
+
+
+@media all and (orientation:portrait) {
+  .modal-body .grid figure {
+    width: 50%;
+    padding: 25%;
+  }
 }
